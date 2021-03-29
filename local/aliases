@@ -1,0 +1,31 @@
+#!/bin/bash
+
+alias secondon="xrandr --output HDMI-1 --auto --right-of eDP-1"
+alias secondoff="xrandr --output HDMI-1 --off"
+
+alias mountpd="sudo mount -o umask=0000 /dev/sdb1 /media/pendrive"
+alias unmountpd="sudo umount /media/pendrive"
+
+alias l="ls --color"
+alias ls="ls --color"
+alias ll="ls -la --color"
+alias la="ls -a --color"
+alias list="ls -1 --color"
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ntree="tree -I node_modules"
+
+alias z="zathura"
+
+alias localdir="cd $HOME/.local"
+alias configdir="cd $HOME/.config"
+
+alias cs="cd $HOME/cheatsheets"
+
+alias todo="vi $HOME/Documents/TODO"
+
+alias dockerps="docker ps --format 'table{{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Ports}}'"
+alias dockerpsa="docker ps -a --format 'table{{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Ports}}'"

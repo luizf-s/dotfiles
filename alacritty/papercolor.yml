@@ -1,0 +1,70 @@
+env:
+  TERM: xterm-256color
+
+font:
+  normal:
+    family: FiraCode Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: FiraCode Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: FiraCode Nerd Font Mono
+    style: Italic
+
+  size: 12.75
+  offset:
+    x: -2
+    y: -2
+
+draw_bold_text_with_bright_colors: true
+
+colors:
+  # COLORSCHEME: papercolor_light.yaml
+  # Default colors
+  primary:
+    # hard contrast:
+    background: '0xeeeeee'
+    foreground: '0x444444'
+
+  normal:
+    black: '0xeeeeee'
+    red: '0xaf0000'
+    green: '0x008700'
+    yellow: '0x5f8700'
+    blue: '0x0087af'
+    magenta: '0x878787'
+    cyan: '0x005f87'
+    white: '0x444444'
+
+  # Bright colors
+  bright:
+    black: '0xbcbcbc'
+    red: '0xd70000'
+    green: '0xd70087'
+    yellow: '0x8700af'
+    blue: '0xd75f00'
+    magenta: '0xd75f00'
+    cyan: '0x005faf'
+    white: '0x005f87'
+  dim:
+    black: '0x232323'
+    red: '0x74423f'
+    green: '0x5e6547'
+    yellow: '0x8b7653'
+    blue: '0x556b79'
+    magenta: '0x6e4962'
+    cyan: '0x5c8482'
+    white: '0x828282'
+
+  # Normal colors
+background_opacity: .95
+
+cursor:
+  # Values for `style`:
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  style: Block
