@@ -4,7 +4,7 @@ call plug#begin('~/.config/.vim/autoload/plug')
     Plug 'tpope/vim-fugitive'
 
     Plug 'tek256/simple-dark'
-endcall
+call plugin#end()
 
 " ==================
 " ==== CONFIGS =====
