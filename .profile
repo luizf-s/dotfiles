@@ -31,13 +31,3 @@ function addToPath {
 }
 
 addToPath /home/luizf/programs/bin
-addToPath /home/luizf/programs/pwa
-addToPath /home/luizf/programs/scripts
-addToPath /usr/local/go/bin
-addToPath /home/luizf/.local/share/npm/bin
-addToPath /home/luizf/.yarn/bin
-addToPath /home/luizf/.local/bin
-addToPath /home/luizf/.dotnet
-addToPath /home/luizf/.dotnet/tools
-
-export GOPATH=/hd/study/go

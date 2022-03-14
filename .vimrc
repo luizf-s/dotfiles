@@ -3,12 +3,13 @@ call plug#begin('~/.config/.vim/autoload/plug')
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
 
+    Plug 'NLKNguyen/papercolor-theme'
+    Plug 'morhetz/gruvbox'
     Plug 'tek256/simple-dark'
-call plugin#end()
+call plug#end()
 
-" ==================
-" ==== CONFIGS =====
-" ==================
+" CONFIGS
+" =======
 set noswapfile
 set hidden
 set nocompatible
@@ -47,9 +48,8 @@ autocmd Filetype scss            setlocal ts=2 sw=2
 autocmd Filetype html            setlocal ts=2 sw=2
 autocmd Filetype go              setlocal ts=4 sw=4 sts=4 noexpandtab
 
-" ==================
-" === KEYBIDINGS ===
-" ==================
+" KEYBIDINGS
+" ==========
 let mapleader=','
 
 " Buffer navigation
@@ -80,18 +80,17 @@ nnoremap <F5> :copen<CR>
 nnoremap <F6> :Vexplore<CR>
 nnoremap <F7> :Marks<CR>
 nnoremap <F9> :Gvdiffsplit!<CR>
-nnoremap <F12> :set laststatus=
 
 nnoremap <leader>ç :vsplit $MYVIMRC<cr>
 nnoremap <leader><f12> :source $MYVIMRC<cr>
 nnoremap <leader><space> :noh<cr>
 
-" ==================
-" ====== FZF =======
-" ==================
+" FZF
+" ===
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-let g:fzf_layout = {'window': 'enew'}
+" let g:fzf_layout = {'window': 'enew'}
+let g:fzf_layout = {'window': { 'width': 1, 'height': 0.6, 'yoffset': 1.0 } }
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path '**/Debug/**' -prune -o -path 'coverage/**' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 
 nnoremap <silent> <leader>b :Buffers<CR>
@@ -99,21 +98,19 @@ nnoremap <silent> <leader>e :FZF -m<CR>
 nnoremap <silent> <leader>k :BLines<CR>
 nnoremap <silent> <leader>l :Lines<CR>
 
-" ==================
-" === FUGITIVE =====
-" ==================
+" FUGITIVE
+" ========
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Git commit<CR>
 noremap <Leader>gsh :Gpush<CR>
 noremap <Leader>gll :Gpull<CR>
 noremap <Leader>gs :G<CR>
-noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 
-" ==================
-" ===== THEME ======
-" ==================
+" THEME
+" =====
 " transparent background
 "autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
 " hi Normal guibg=NONE ctermbg=NONE
@@ -121,4 +118,8 @@ noremap <Leader>gr :Gremove<CR>
 let base16colorspace=256
 set termguicolors
 
-colorscheme simple-dark
+" colorscheme simple-dark
+colorscheme gruvbox
+
+" set background=light
+" colorscheme PaperColor
